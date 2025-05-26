@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Alfina Nuril Fauziyah</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #d23669;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .birthday-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .birthday-card::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ff9a9e);
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.6;
+        }
+        
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 5px solid #d23669;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .message {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #d23669;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(210, 54, 105, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(210, 54, 105, 0.6);
+        }
+        
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d23669"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center center;
+            background-size: contain;
+            opacity: 0;
+            animation: float 6s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+                top: 100%;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                top: -10%;
+            }
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .memory-box {
+            background-color: #fff9f9;
+            border-left: 5px solid #d23669;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .gallery-item {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <div class="birthday-card">
+            <h1>Selamat Ulang Tahun, Alfina Nuril Fauziyah! 🎉🎂</h1>
+            
+            <div class="photo-frame">
+                <!-- Ganti dengan foto Alfina -->
+                <img src="WhatsApp Image 2025-05-26 at 01.43.19_c89fdc64.jpg" alt="Alfina Nuril Fauziyah">
+            </div>
+            
+            <div class="message">
+                <p>Alloo Cantikkuuu,</p>
+                <p>Di hari spesialmu ini, aku ingin mengucapkan selamat ulang tahun yang penuh kebahagiaan dan cinta. Semoga tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan mimpi yang terwujud untukmu.</p>
+                <p>Terima kasih sudah menjadi bagian hidupku. Aku bersyukur bisa merayakan hari spesialmu bersamamu.</p>
+                <p>With Full Love,</p>
+                <p><strong>Mas Salman</strong></p>
+            </div>
+            
+            <a href="#" class="btn" id="playMusic">Putar Musik</a>
+            <a href="#" class="btn" id="showMore">Lihat Kenangan</a>
+        </div>
+        
+        <div id="memories" style="display: none;">
+            <h2>Kenangan Indah Kita</h2>
+            
+            <div class="gallery">
+                <!-- Ganti dengan foto-foto kenangan kalian -->
+                <div class="gallery-item">
+                    <img src="IMG-20250517-WA0020.jpg" alt="Kenangan 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG-20250517-WA0021.jpg" alt="Kenangan 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG-20250517-WA0025.jpg" alt="Kenangan 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2025-05-26 at 01.18.07_d7fbcc59.jpg" alt="Kenangan 4">
+                </div>
+            </div>
+            
+            <div class="memory-box">
+                <h3>Momen Favorit Kita</h3>
+                <p>Ingat waktu kita pertama kali ketemu di [tempat]? Aku langsung tahu kamu orang spesial. Senyummu membuat hari-hariku lebih cerah.</p>
+            </div>
+            
+            <div class="memory-box">
+                <h3>Hal yang Aku Sukai dari Kamu</h3>
+                <ul>
+                    <li>Senyummu bikin hariku cerah.</li>
+                    <li>Tawamu selalu menenangkan.</li>
+                    <li>Kamu selalu perhatian.</li>
+                    <li>Kamu pendengar yang baik.</li>
+                    <li>Cara kamu peduli bikin aku merasa dihargai.</li>
+                    <li>Kamu selalu ada saat aku butuh.</li>
+                    <li>Kamu cerdas dan bijaksana.</li>
+                    <li>Kamu punya selera humor yang pas.</li>
+                    <li>Kamu membuatku merasa nyaman menjadi diriku sendiri.</li>
+                    <li>Kamu selalu mendukung mimpiku.</li>
+                    <li>Cara kamu berbicara itu menenangkan.</li>
+                    <li>Kamu selalu punya solusi untuk setiap masalah.</li>
+                    <li>Kamu penuh semangat.</li>
+                    <li>Kamu punya hati yang lembut.</li>
+                    <li>Kesabaranmu luar biasa.</li>
+                    <li>Kamu bisa membuat hal sederhana jadi istimewa.</li>
+                    <li>Kamu selalu mencoba memahami sudut pandangku.</li>
+                    <li>Kamu jujur dan tulus.</li>
+                    <li>Kamu selalu membuatku tersenyum tanpa alasan.</li>
+                    <li>Kamu membuatku merasa dicintai.</li>
+                    <li>Kamu sangat pengertian.</li>
+                    <li>Kamu selalu memberikan yang terbaik.</li>
+                    <li>Kamu pekerja keras.</li>
+                    <li>Kamu menghargai hal-hal kecil.</li>
+                    <li>Kamu tahu caranya membuatku bahagia.</li>
+                    <li>Kamu penuh kejutan.</li>
+                    <li>Kamu apa adanya.</li>
+                    <li>Kamu bisa jadi tempat cerita terbaik.</li>
+                    <li>Kamu selalu peduli dengan keluargaku.</li>
+                    <li>Kamu bertanggung jawab.</li>
+                    <li>Kamu percaya padaku.</li>
+                    <li>Kamu membuat hidupku lebih berwarna.</li>
+                    <li>Kamu selalu menyemangatiku.</li>
+                    <li>Kamu tahu caranya menghiburku saat sedih.</li>
+                    <li>Kamu sangat sabar menghadapi tingkahku.</li>
+                    <li>Kamu punya cara unik menunjukkan rasa cinta.</li>
+                    <li>Kamu membuatku merasa istimewa.</li>
+                    <li>Kamu kuat dan tegar.</li>
+                    <li>Kamu selalu menghargai pendapatku.</li>
+                    <li>Kamu memotivasi aku jadi lebih baik.</li>
+                    <li>Kamu sederhana tapi istimewa.</li>
+                    <li>Kamu punya semangat hidup yang menular.</li>
+                    <li>Kamu ramah kepada semua orang.</li>
+                    <li>Kamu tidak pernah menyerah.</li>
+                    <li>Kamu pandai membawa suasana.</li>
+                    <li>Kamu membuatku merasa aman.</li>
+                    <li>Kamu penuh perhatian tanpa diminta.</li>
+                    <li>Kamu selalu berusaha jadi lebih baik.</li>
+                    <li>Kamu tidak pernah lupa detail tentangku.</li>
+                    <li>Kamu selalu meminta maaf kalau salah.</li>
+                    <li>Kamu mengajarkan banyak hal baru.</li>
+                    <li>Kamu selalu menghormati pilihanku.</li>
+                    <li>Kamu tidak takut menunjukkan kelemahan.</li>
+                    <li>Kamu selalu melindungiku.</li>
+                    <li>Kamu bijak dalam mengambil keputusan.</li>
+                    <li>Kamu bisa diajak diskusi tentang apa saja.</li>
+                    <li>Kamu membuatku merasa dihargai.</li>
+                    <li>Kamu sederhana tapi memikat.</li>
+                    <li>Kamu selalu tepat waktu.</li>
+                    <li>Kamu tidak mudah menyerah.</li>
+                    <li>Kamu penuh empati.</li>
+                    <li>Kamu pandai mendamaikan suasana.</li>
+                    <li>Kamu tahu caranya membuatku tertawa.</li>
+                    <li>Kamu percaya diri tanpa sombong.</li>
+                    <li>Kamu punya cara unik menunjukkan cinta.</li>
+                    <li>Kamu selalu bersikap adil.</li>
+                    <li>Kamu terbuka dengan kritik.</li>
+                    <li>Kamu punya prinsip yang kuat.</li>
+                    <li>Kamu penuh perhatian pada detail.</li>
+                    <li>Kamu tidak egois.</li>
+                    <li>Kamu selalu menyemangatiku.</li>
+                    <li>Kamu pandai menjaga hubungan.</li>
+                    <li>Kamu tahu kapan harus serius dan kapan bercanda.</li>
+                    <li>Kamu kreatif dan inovatif.</li>
+                    <li>Kamu selalu berpikiran positif.</li>
+                    <li>Kamu sabar menghadapi kekuranganku.</li>
+                    <li>Kamu selalu mendukung pilihanku.</li>
+                    <li>Kamu tidak takut mengakui kesalahan.</li>
+                    <li>Kamu penuh rasa syukur.</li>
+                    <li>Kamu berjiwa besar.</li>
+                    <li>Kamu tidak mudah menyerah pada keadaan.</li>
+                    <li>Kamu menghormati ruang pribadiku.</li>
+                    <li>Kamu pandai memimpin.</li>
+                    <li>Kamu perhatian dengan hal-hal kecil.</li>
+                    <li>Kamu pandai menjaga rahasia.</li>
+                    <li>Kamu selalu tulus mencintai.</li>
+                    <li>Kamu bisa membuatku merasa percaya diri.</li>
+                    <li>Kamu selalu bersikap jujur.</li>
+                    <li>Kamu setia pada janji.</li>
+                    <li>Kamu mendukung mimpiku.</li>
+                    <li>Kamu rendah hati.</li>
+                    <li>Kamu tidak mudah menyerah.</li>
+                    <li>Kamu peduli dengan lingkunganku.</li>
+                    <li>Kamu sangat sabar menghadapi masalah.</li>
+                    <li>Kamu tahu caranya membuat hariku lebih baik.</li>
+                    <li>Kamu selalu berusaha memahami aku.</li>
+                    <li>Kamu tahu caranya membuatku merasa dicintai.</li>
+                    <li>Kamu punya hati yang besar.</li>
+                    <li>Kamu adalah kamu, yang aku suka apa adanya</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="birthday-card">
+            <h2>Pesan Spesial untuk Alfina</h2>
+            <p>Alfina, kamu adalah anugerah terindah dalam hidupku. Di hari ulang tahunmu ini, aku berharap semua impianmu menjadi kenyataan.</p>
+            <p>Aku berjanji akan selalu ada untukmu, dalam suka maupun duka. Mari kita buat lebih banyak kenangan indah bersama.</p>
+            <p>Selamat ulang tahun sayang! ❤️</p>
+        </div>
+    </div>
+    
+    <footer>
+        Dibuat dengan ❤️ oleh Mas Salman - © 2025
+    </footer>
+    
+    <audio id="birthdaySong" loop>
+        <source src="monokrom.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <script>
+        // Membuat efek hati jatuh
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const heartCount = 30;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                
+                // Posisi acak
+                heart.style.left = Math.random() * 100 + 'vw';
+                
+                // Ukuran acak
+                const size = Math.random() * 20 + 10;
+                heart.style.width = size + 'px';
+                heart.style.height = size + 'px';
+                
+                // Animasi dengan durasi acak
+                heart.style.animationDuration = Math.random() * 5 + 5 + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        // Memutar musik
+        document.getElementById('playMusic').addEventListener('click', function(e) {
+            e.preventDefault();
+            const audio = document.getElementById('birthdaySong');
+            
+            if (audio.paused) {
+                audio.play();
+                this.textContent = 'Jeda Musik';
+            } else {
+                audio.pause();
+                this.textContent = 'Putar Musik';
+            }
+        });
+        
+        // Menampilkan kenangan
+        document.getElementById('showMore').addEventListener('click', function(e) {
+            e.preventDefault();
+            const memories = document.getElementById('memories');
+            
+            if (memories.style.display === 'none' || memories.style.display === '') {
+                memories.style.display = 'block';
+                this.textContent = 'Sembunyikan Kenangan';
+                // Scroll ke bagian kenangan
+                memories.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                memories.style.display = 'none';
+                this.textContent = 'Lihat Kenangan';
+            }
+        });
+        
+        // Jalankan efek saat halaman dimuat
+        window.onload = function() {
+            createHearts();
+        };
+    </script>
+</body>
+</html>
